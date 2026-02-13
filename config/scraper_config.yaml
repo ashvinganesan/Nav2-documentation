@@ -1,0 +1,29 @@
+scraper:
+  start_url: "https://docs.nav2.org/configuration/index.html"
+  base_domain: "docs.nav2.org"
+  max_depth: 10
+  rate_limit_seconds: 1.0
+  timeout_seconds: 30
+  max_retries: 3
+  user_agent: "Nav2DocScraper/1.0"
+
+parser:
+  content_selector: "div.document"
+  exclude_selectors:
+    - "div.sphinxsidebar"
+    - "div.related"
+    - "div.footer"
+    - "nav"
+    - "div.headerlink"
+  parameter_table_selector: "dl.py"
+
+markdown:
+  preserve_html_tables: true
+  code_fence_style: "```"
+  heading_style: "atx"
+
+output:
+  filename: "nav2_documentation_complete.md"
+  include_toc: true
+  include_metadata: true
+  include_index: true
