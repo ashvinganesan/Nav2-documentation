@@ -1,0 +1,1 @@
+This program scrapes the Nav2 website and generates a document with all of the different parameters as a md. This is easily searchable and includable in your repository. This was done in Association with IGVC RPI 2026
